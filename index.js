@@ -5,7 +5,7 @@ async function getPersonsInfo(name) {
   try {
     const people = await server.getPeople();
     const person = people.find(person => { return person.name === name });
-    return person;
+    return people;;
   } catch (error) {
     console.error(error)
   }
