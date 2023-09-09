@@ -1,9 +1,13 @@
 console.log('hello dirt')
 
 async function getPersonsInfo(name) {
-  const people = await server.getPeople();
-  const person = people.find(person => { return person.name === name });
-  return person;
+  try {
+    const people = await server.getPeople();
+    const person = people.find(person => { return person.name === name });
+    return person;
+  } catch (error) {
+    console.error(error)
+  }
 }
 
 const server = {
@@ -37,6 +41,4 @@ const view = getPersonsInfo('Odin')
 
 view.then(() => {
   console.log(view)
-}).catch(err => {
-  console.error(err)
 })
