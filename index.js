@@ -42,6 +42,4 @@ const view = getPersonsInfo('Odin')
 
 view.then((person) => {
   console.log(person)
-}).catch(err => {
-  console.error(err)
 })
