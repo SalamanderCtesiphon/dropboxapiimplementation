@@ -1,3 +1,4 @@
+
 console.log('hello dirt')
 
 async function getPersonsInfo(name) {
@@ -39,6 +40,8 @@ const server = {
 
 const view = getPersonsInfo('Odin')
 
-view.then(() => {
-  console.log(view)
+view.then((person) => {
+  console.log(person)
+}).catch(err => {
+  console.error(err)
 })
