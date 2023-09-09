@@ -33,6 +33,8 @@ const server = {
 };
 
 
-const view = getPersonsInfo('Freyja')
+const view = getPersonsInfo('Odin')
 
-console.log(view)
+view.then(() => {
+  console.log(view)
+})
